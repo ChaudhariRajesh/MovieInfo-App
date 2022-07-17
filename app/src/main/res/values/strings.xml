@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">AndroidAssignment</string>
+
+    <!-- Custom themes for various components -->
+    <style name="Theme.CustomMovieAttributesTheme" parent="Theme.AndroidAssignment">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.BodySmall</item>
+        <item name="android:textStyle">bold</item>
+        <item name="background">@id/none</item>
+        <item name="android:layout_marginBottom">3dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:textColor">@color/secondaryDarkColor</item>
+    </style>
+
+    <style name="Theme.CustomMovieTitleTheme" parent="Theme.AndroidAssignment">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.TitleLarge</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+    </style>
+
+    <style name="Theme.CustomSubtitleTheme" parent="Theme.AndroidAssignment">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_marginBottom">3dp</item>
+        <item name="android:layout_marginTop">7dp</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.HeadlineSmall</item>
+    </style>
+
+    <style name="Theme.CustomSeperatorView" parent="Theme.AndroidAssignment">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginStart">60dp</item>
+        <item name="android:background">@color/secondaryDarkColor</item>
+    </style>
+
+    <style name="Theme.CustomMovieInfoGridView" parent="Theme.AndroidAssignment">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:horizontalSpacing">5dp</item>
+        <item name="android:numColumns">3</item>
+
+    </style>
+
+
+
+</resources>

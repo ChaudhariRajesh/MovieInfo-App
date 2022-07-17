@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Layout of the RecyclerView item
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp"
+            android:background="@color/primaryColor">
+
+            <ImageView
+                android:id="@+id/posterImageView"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="5dp" />
+
+            <TextView
+                android:id="@+id/titleTextView"
+                style="@style/Theme.CustomMovieTitleTheme"
+                android:layout_below="@id/posterImageView"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Avengers" />
+
+            <TextView
+                android:id="@+id/yearTextView"
+                android:layout_below="@id/titleTextView"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:text="2018"
+                style="@style/Theme.CustomMovieAttributesTheme"/>
+
+            <TextView
+                android:id="@+id/runtimeTextView"
+                style="@style/Theme.CustomMovieAttributesTheme"
+                android:layout_below="@id/titleTextView"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/yearTextView"
+                android:layout_above="@id/shortSummaryTextView"
+                android:text="2 Hr 20 min" />
+
+            <TextView
+                android:id="@+id/shortSummaryTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/yearTextView"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@android:color/transparent"
+                android:ellipsize="end"
+                android:lines="3"
+                android:text="Short summary of the movie in three lines"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#AEAEAE" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

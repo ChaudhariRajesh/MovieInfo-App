@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Layout of the MovieInfo Activity
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.MovieInfoActivity"
+    android:background="@color/primaryDarkColor">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <ImageView
+                android:id="@+id/moviePosterImageView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+
+
+            <TextView
+                android:id="@+id/titleTextView"
+                style="@style/Theme.CustomMovieTitleTheme"
+                android:layout_below="@id/moviePosterImageView"
+                android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+                android:text="Avengers"/>
+
+            <Button
+                android:id="@+id/watchNowButton"
+                style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/secondaryColor"
+                android:textColor="@color/secondaryTextColor"
+                android:layout_height="60dp"
+                android:layout_below="@+id/titleTextView"
+                android:layout_marginTop="10dp"
+                android:text="Watch Now" />
+
+            <Button
+                android:id="@+id/watchTrailerButton"
+                style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                android:backgroundTint="@color/secondaryColor"
+                android:textColor="@color/secondaryTextColor"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/watchNowButton"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="10dp"
+                android:text="Watch Trailer" />
+
+
+            <TextView
+                android:id="@+id/longSummaryTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/watchTrailerButton"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="10dp"
+                android:text="Long summary of the movie in three lines"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                android:textColor="#AEAEAE"/>
+
+            <TextView
+                android:id="@+id/genreTextView"
+                style="@style/Theme.CustomMovieAttributesTheme"
+                android:layout_below="@id/longSummaryTextView"
+                android:layout_alignParentStart="true"
+                android:text="Genre" />
+
+            <TextView
+                android:id="@+id/imdbRatingTextView"
+                style="@style/Theme.CustomMovieAttributesTheme"
+                android:layout_below="@id/longSummaryTextView"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/genreTextView"
+                android:text="IMDB Rating" />
+
+            <TextView
+                android:id="@+id/movieyearTextView"
+                style="@style/Theme.CustomMovieAttributesTheme"
+                android:layout_below="@id/genreTextView"
+                android:layout_alignParentStart="true"
+                android:layout_toEndOf="@id/genreTextView"
+                android:text="Year" />
+
+            <TextView
+                android:id="@+id/durationTextView"
+                style="@style/Theme.CustomMovieAttributesTheme"
+                android:layout_below="@id/imdbRatingTextView"
+                android:layout_toEndOf="@id/genreTextView"
+                android:layout_marginStart="10dp"
+                android:text="Duration"/>
+
+            <TextView
+                android:id="@+id/castAndCrewHeading"
+                style="@style/Theme.CustomSubtitleTheme"
+                android:layout_below="@id/durationTextView"
+                android:text="Cast &amp; Crew" />
+
+
+            <GridView
+                android:id="@+id/cast_gridview"
+                style="@style/Theme.CustomMovieInfoGridView"
+                android:layout_below="@id/castAndCrewHeading"
+                tools:listitem="@layout/movie_info_cardview_layout" />
+
+            <View
+                android:id="@+id/seperator1"
+                style="@style/Theme.CustomSeperatorView"
+                android:layout_below="@id/cast_gridview" />
+
+            <TextView
+                android:id="@+id/director_title_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seperator1"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:text="Director"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="20sp" />
+
+            <GridView
+                android:id="@+id/director_gridview"
+                style="@style/Theme.CustomMovieInfoGridView"
+                android:layout_below="@id/director_title_textview"
+                tools:listitem="@layout/movie_info_cardview_layout" />
+
+
+            <View
+                android:id="@+id/seperator2"
+                style="@style/Theme.CustomSeperatorView"
+                android:layout_below="@id/director_gridview" />
+
+            <TextView
+                android:id="@+id/writter_title_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seperator2"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:text="Writer"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="20sp" />
+
+            <GridView
+                android:id="@+id/writer_gridview"
+                style="@style/Theme.CustomMovieInfoGridView"
+                android:layout_below="@id/writter_title_textview"
+                tools:listitem="@layout/movie_info_cardview_layout" />
+
+            <View
+                android:id="@+id/seperator3"
+                style="@style/Theme.CustomSeperatorView"
+                android:layout_below="@id/writer_gridview"
+                android:layout_marginBottom="5dp"/>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
