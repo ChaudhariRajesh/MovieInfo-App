@@ -5,7 +5,7 @@ package com.example.androidassignment.model.youtube;
 public class YouTubeVideoModel {
 
     //API Key of the YouTube Service
-    private static final String API_KEY = "AIzaSyCMwa8DT1zpGV-4MAz6UkF4nUM4Pcr4tt8";
+    private static final String API_KEY = "MY_API_KEY";
     private String videoId;
 
     public YouTubeVideoModel(String videoId) {
